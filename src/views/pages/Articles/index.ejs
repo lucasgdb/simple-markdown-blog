@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../../components/MetaTags') %>
+
+    <title>Blog - Articles</title>
+</head>
+
+<body>
+    <%- include('../../components/Header') %>
+
+    <% articles.forEach(article => { %>
+    <p><%- article.title %></p>
+    <form action="/articles/<%= article._id %>?_method=DELETE" method="POST">
+        <button type="submit">Remover</button></form>
+    <% }); %>
+</body>
+
+</html>
