@@ -2,14 +2,14 @@
 <html lang="en">
 
 <head>
-    <%- include('./components/MetaTags') %>
-    <link rel="stylesheet" href="./src/css/index.css">
+    <%- include('./components/MetaTags/index') %>
+    <link rel="stylesheet" href="./src/index.css">
 
     <title>Simple Markdown Blog</title>
 </head>
 
 <body>
-    <%- include('./components/Header') %>
+    <%- include('./components/Header/index') %>
 
     <div class="container">
         <div class="card-panel top-div-padding">
@@ -50,14 +50,7 @@
         </div>
     </div>
 
-    <script src="./src/js/scripts.js"></script>
-    <script>
-        M.Slider.init(document.querySelectorAll('.slider'), { interval: 5000, height: 300 });
-
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('./service-worker.js');
-        }
-    </script>
+    <script src="./src/scripts.js"></script>
 </body>
 
 </html>
