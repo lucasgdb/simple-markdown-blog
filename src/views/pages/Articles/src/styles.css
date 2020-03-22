@@ -1,0 +1,38 @@
+textarea {
+    font-size: 25px;
+    resize: vertical;
+    min-height: 200px;
+    border: 0.5px solid rgb(190, 190, 190);
+    outline: 0;
+    color: #333;
+}
+
+.input-field label {
+    color: #1b1a25;
+}
+
+.input-field input:focus + label,
+.input-field textarea:focus + label {
+    color: #1b1a25 !important;
+}
+
+.input-field input:focus,
+.input-field textarea:focus {
+    border-bottom: 1px solid #1b1a25 !important;
+    box-shadow: 0 1px 0 0 #1b1a25 !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+@media (min-width: 600px) {
+    textarea {
+        border-right: 0;
+    }
+
+    textarea:focus {
+        border-right: 0;
+    }
+}

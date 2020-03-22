@@ -1,8 +1,8 @@
 {
-    "name": "Mini Blog NodeJS",
-    "short_name": "Mini Blog",
+    "name": "Simple Markdown Blog",
+    "short_name": "Simple Blog",
     "start_url": "./?utm_source=web_app_manifest",
-    "description": "A mini blog made with NodeJS using EJS as a template engine.",
+    "description": "A simple Markdown Blog made with TypeScript, MarkDown, Mongo and Node using EJS as a template engine.",
     "lang": "pt-BR",
     "display": "standalone",
     "orientation": "portrait",

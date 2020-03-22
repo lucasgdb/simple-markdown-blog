@@ -1,5 +1,5 @@
 {
-    "name": "mini-blog",
+    "name": "simple-markdown-blog",
     "private": false,
     "version": "1.0.0",
     "main": "dist/index.js",
@@ -16,8 +16,11 @@
     },
     "dependencies": {
         "cors": "^2.8.5",
+        "dompurify": "^2.0.8",
         "ejs": "^3.0.1",
         "express": "^4.17.1",
+        "jsdom": "^16.2.1",
+        "marked": "^0.8.2",
         "method-override": "^3.0.0",
         "mongoose": "^5.9.3",
         "slugify": "^1.4.0"
@@ -28,8 +31,11 @@
         "@babel/preset-env": "^7.8.7",
         "@babel/preset-typescript": "^7.8.3",
         "@types/cors": "^2.8.6",
+        "@types/dompurify": "^2.0.1",
         "@types/ejs": "^3.0.1",
         "@types/express": "^4.17.3",
+        "@types/jsdom": "^16.1.0",
+        "@types/marked": "^0.7.3",
         "@types/method-override": "^0.0.31",
         "@types/mongoose": "^5.7.3",
         "@types/node": "^13.9.1",

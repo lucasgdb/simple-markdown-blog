@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../../components/MetaTags') %>
+    <link rel="stylesheet" href="/pages/Articles/src/styles.css">
+
+    <title>Edit - <%= article.title %></title>
+</head>
+
+<body>
+    <%- include('../../components/Header') %>
+
+    <div class="container">
+        <div class="card-panel left-div-padding" style="padding-bottom: 12px">
+            <h1 class="flow-text" style="font-size: 30px !important; margin: 0 0 10px"><i class="material-icons left">edit</i>Edit an article</h1>
+
+            <form action="/articles/<%= article._id %>?_method=PUT" method="POST">
+                <div class="row" style="margin-bottom: 0">
+                    <div class="input-field col s12">
+                        <input value="<%= article.title %>" placeholder="Type the article title here..." name="title" id="title" type="text" class="validate valid" required>
+                        <label class="active" for="title">Title</label>
+                    </div>
+
+                    <div class="input-field col s12">
+                        <input value="<%= article.description %>" placeholder="Type the article description here..." name="description" id="description" type="text" class="validate valid" required>
+                        <label class="active" for="description">Description</label>
+                    </div>
+
+                    <div class="input-field col s12" style="margin-bottom: 0">
+                        <textarea placeholder="Type the article content here..." name="content" id="content" class="materialize-textarea validate valid" spellcheck="false" style="height: 150px" required><%= article.content %></textarea>
+                        <label class="active" for="content">Content</label>
+                    </div>
+
+                    <button type="submit" class="btn waves-effect waves-light fp-black"><i class="material-icons left">save</i>Save</button>
+                    <a href="/articles/<%= article.slug %>" class="btn waves-effect fp-red"><i class="material-icons left">cancel</i>Cancel</a>
+                </div>
+            </form>
+
+            <div class="left-div fp-black"></div>
+        </div>
+    </div>
+
+    <script>
+        M.textareaAutoResize(document.querySelector('textarea'))
+    </script>
+</body>
+
+</html>

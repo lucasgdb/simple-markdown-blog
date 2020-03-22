@@ -10,11 +10,39 @@
 <body>
     <%- include('../../components/Header') %>
 
-    <% articles.forEach(article => { %>
-    <p><%- article.title %></p>
-    <form action="/articles/<%= article._id %>?_method=DELETE" method="POST">
-        <button type="submit">Remover</button></form>
-    <% }); %>
+    <div class="container">
+        <% articles.forEach(article => { %>
+        <div class="card-panel left-div-padding" style="padding-bottom: 12px">
+            <h1 class="flow-text" style="margin: 0 0 5px"><%= article.title %></h1>
+            <p><%= article.description %></p>
+
+            <div class="divider"></div>
+
+            <div style="margin-top: 12px">
+                <form action="/articles/<%= article._id %>?_method=DELETE" method="POST">
+                    <button type="submit" class="btn fp-red"><i class="material-icons left">delete</i>Delete</button>
+                    <a href="/articles/<%= article.slug %>" class="btn fp-black right"><i class="material-icons right">chevron_right</i>Read more</a>
+                </form>
+            </div>
+
+            <div class="left-div fp-black"></div>
+        </div>
+        <% }) %>
+
+        <%- articles.length ? '' : '<h4>There are no articles on this section.</h4>' %>
+    </div>
+
+    <div class="fixed-action-btn">
+        <a href="/articles/new" class="btn-floating btn-large fp-black">
+            <i class="large material-icons">add</i>
+        </a>
+    </div>
+
+    <script>
+        M.FloatingActionButton.init(document.querySelectorAll('.fixed-action-btn'), {
+            hoverEnabled: false
+        });
+    </script>
 </body>
 
 </html>

@@ -2,10 +2,10 @@
     <nav>
         <div class="nav-wrapper">
             <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">menu</i></a>
-            <a href="/" class="brand-logo">Mini Blog</a>
+            <a href="/" class="brand-logo hide-on-small-and-down">Simple MD Blog</a>
             <ul class="right hide-on-med-and-down">
-                <li><a href=".">More</a></li>
-                <li><a href="https://github.com/lucasgdb" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                <li><a href="/articles">Articles</a></li>
+                <li><a href="https://github.com/lucasgdb/simple-markdown-blog" target="_blank" rel="noopener noreferrer">GitHub</a></li>
             </ul>
         </div>
     </nav>
@@ -16,23 +16,22 @@
         <div class="user-view">
             <div class="background"></div>
             <a href="."><img src="/static/PWA_images/logo64x64.png" alt=""></a>
-            <a href="#name"><span class="white-text name">Lucas Bittencourt</span></a>
-            <a href="#email"><span class="white-text email">lucasgdbittencourt@gmail.com</span></a>
+            <a href="https://github.com/lucasgdb" target="_blank" rel="noopener noreferrer"><span class="white-text name">Lucas Bittencourt</span></a>
+            <a href="#lucasgdbittencourt@gmail.com"><span class="white-text email">lucasgdbittencourt@gmail.com</span></a>
         </div>
     </li>
     <li>
-        <a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a>
+        <a href="/articles"><i class="material-icons left">message</i>Articles</a>
     </li>
-    <li><a href="#!">Second Link</a></li>
+    <li><a href="https://github.com/lucasgdb/simple-markdown-blog" target="_blank" rel="noopener noreferrer"><i class="material-icons left">code</i>Source code</a></li>
     <li>
         <div class="divider"></div>
     </li>
-    <li><a class="subheader">Subheader</a></li>
-    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+    <li><a class="subheader">Contact</a></li>
+    <li><a class="waves-effect" href="https://github.com/lucasgdb" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+    <li><a class="waves-effect" href="https://www.facebook.com/lucasgdbittencourt" target="_blank" rel="noopener noreferrer">Facebook</a></li>
 </ul>
 
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        M.Sidenav.init(document.querySelectorAll('.sidenav'));
-    });
+    M.Sidenav.init(document.querySelectorAll('.sidenav'));
 </script>

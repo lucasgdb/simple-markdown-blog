@@ -3,15 +3,57 @@
 
 <head>
     <%- include('./components/MetaTags') %>
+    <link rel="stylesheet" href="./src/css/index.css">
 
-    <title>Mini Blog</title>
+    <title>Simple Markdown Blog</title>
 </head>
 
 <body>
     <%- include('./components/Header') %>
 
+    <div class="container">
+        <div class="card-panel top-div-padding">
+            <h1 class="mont-serrat fp-black-text" style="font-size:30px;margin:-5px 0 10px"><i class="material-icons left" style="top:5.5px">home</i>Simple Markdown Blog</h1>
+            <label class="fp-black-text">Blog Online para estudantes, professores e Desenvolvedores.</label>
+
+            <div class="divider"></div>
+
+            <div class="slider" style="margin-top: 10px">
+                <ul class="slides z-depth-2">
+                    <li class="grey lighten-3">
+                        <img src="/static/bg01.jpg" alt="bg02">
+                        <div class="caption left-align">
+                            <h3 class="dark"><i style="top:10px" class="material-icons fp-red-text left small">comment</i> BLOG ATUALIZADO!</h3>
+                            <h5 class="light">Possuímos um blog totalmente atualizado com notícias, tutoriais e atualizações do mundo da Tecnologia.</h5>
+                        </div>
+                    </li>
+
+                    <li class="grey lighten-3">
+                        <img src="/static/bg01.jpg" alt="bg04">
+                        <div class="caption left-align">
+                            <h3 class="dark">CÓDIGO ABERTO! <i style="top:10px" class="material-icons fp-red-text left small">code</i></h3>
+                            <h5 class="light">O Markdown Blog é de Código Aberto e livre para qualquer um estudar/melhorar.</h5>
+                        </div>
+                    </li>
+
+                    <li class="grey lighten-3">
+                        <img src="/static/bg01.jpg" alt="bg05">
+                        <div class="caption left-align">
+                            <h3 class="dark"><i style="top:10px" class="material-icons fp-red-text left small">free_breakfast</i>O MAIS ATUALIZADO!</h3>
+                            <h5 class="light">Tá sentindo falta de alguma Ferramenta ou encontrou algum erro? Por favor, <a href="./contact/">fale conosco</a>.</h5>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="top-div fp-black"></div>
+        </div>
+    </div>
+
     <script src="./src/js/scripts.js"></script>
     <script>
+        M.Slider.init(document.querySelectorAll('.slider'), { interval: 5000, height: 300 });
+
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('./service-worker.js');
         }

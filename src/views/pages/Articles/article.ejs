@@ -3,14 +3,62 @@
 
 <head>
     <%- include('../../components/MetaTags') %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css">
 
-    <title>Blog - Articles</title>
+    <style>
+        .markdown-body {
+            box-sizing: border-box;
+            min-width: 200px;
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 20px 45px 45px;
+        }
+
+        @media (max-width: 767px) {
+            .markdown-body {
+                padding: 15px;
+            }
+        }
+    </style>
+
+    <title>Article - <%= article.title %></title>
 </head>
 
 <body>
     <%- include('../../components/Header') %>
 
-    <p><%- article.title %></p>
+    <div class="container">
+        <h1 class="flow-text" style="font-size: 35px; margin-bottom: 0"><%= article.title %></h1>
+        <p><%= article.description %></p>
+
+        <article class="markdown-body">
+            <%- article.sanitizedHTML %>
+        </article>
+    </div>
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large fp-black">
+            <i class="large material-icons">more_horiz</i>
+        </a>
+
+        <ul>
+            <li><a href="/articles/<%= article.slug %>/edit" class="btn-floating fp-black"><i class="material-icons">edit</i></a></li>
+            <form action="/articles/<%= article._id %>?_method=DELETE" method="POST">
+                <li><button type="submit" class="btn-floating fp-red"><i class="material-icons">delete</i></button></li>
+            </form>
+        </ul>
+    </div>
+
+    <script>
+        const unorderedLists = document.querySelectorAll('.container ul');
+
+        M.FloatingActionButton.init(document.querySelectorAll('.fixed-action-btn'), {
+            hoverEnabled: false
+        });
+
+        for (let i = 0; i < unorderedLists.length; i++) {
+            unorderedLists[i].classList.add('browser-default')
+        }
+    </script>
 </body>
 
 </html>

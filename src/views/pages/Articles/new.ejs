@@ -3,16 +3,43 @@
 
 <head>
     <%- include('../../components/MetaTags') %>
+    <link rel="stylesheet" href="/pages/Articles/src/styles.css">
 
-    <title>Blog - Articles</title>
+    <title>Blog - New article</title>
 </head>
 
 <body>
     <%- include('../../components/Header') %>
 
-    <form action="" method="post">
-        
-    </form>
+    <div class="container">
+        <div class="card-panel left-div-padding" style="padding-bottom: 12px">
+            <h1 class="flow-text" style="margin: 0 0 10px"><i class="material-icons left" style="top: 2px">save</i>Create a new article</h1>
+
+            <form action="/articles" method="POST">
+                <div class="row" style="margin-bottom: 0">
+                    <div class="input-field col s12">
+                        <input placeholder="Type the article title here..." name="title" id="title" type="text" class="validate" required>
+                        <label for="title">Title</label>
+                    </div>
+
+                    <div class="input-field col s12">
+                        <input placeholder="Type the article description here..." name="description" id="description" type="text" class="validate" required>
+                        <label for="description">Description</label>
+                    </div>
+
+                    <div class="input-field col s12" style="margin-bottom: 0">
+                        <textarea placeholder="Type the article content here..." name="content" id="content" class="materialize-textarea validate" spellcheck="false" style="height: 150px" required></textarea>
+                        <label for="content">Content</label>
+                    </div>
+
+                    <button type="submit" class="btn waves-effect waves-light fp-black right"><i class="material-icons left">add</i>Post</button>
+                    <a href="/articles" class="btn waves-effect fp-red"><i class="material-icons left">cancel</i>Cancel</a>
+                </div>
+            </form>
+
+            <div class="left-div fp-black"></div>
+        </div>
+    </div>
 </body>
 
 </html>
