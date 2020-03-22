@@ -2,7 +2,7 @@
     "name": "Simple Markdown Blog",
     "short_name": "Simple Blog",
     "start_url": "./?utm_source=web_app_manifest",
-    "description": "A simple Markdown Blog made with TypeScript, MarkDown, Mongo and Node using EJS as a template engine.",
+    "description": "A simple Markdown Blog made with TypeScript, Mongo and Node using EJS as a template engine.",
     "lang": "pt-BR",
     "display": "standalone",
     "orientation": "portrait",

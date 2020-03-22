@@ -1,5 +1,6 @@
 {
     "name": "simple-markdown-blog",
+    "description": "A simple Markdown Blog made with TypeScript, Mongo and Node using EJS as a template engine.",
     "private": false,
     "version": "1.0.0",
     "main": "dist/index.js",
