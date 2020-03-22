@@ -1,6 +1,6 @@
 import mongoose, { Schema } from 'mongoose';
 
-import IArticles from '../helpers/interfaces/IArticles';
+import IArticles from './IArticle';
 
 const ArticleSchema: Schema = new mongoose.Schema(
     {
