@@ -1,8 +1,8 @@
-# Docker, Mongo and Node with Typescript
+# Simple Markdown Blog
 
 ## Requirements
 
--   Docker
+-   Docker (for mongo)
 -   Yarn
 
 ## How to use
