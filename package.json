@@ -42,7 +42,7 @@
         "@types/node": "^13.9.3",
         "babel-preset-minify": "^0.5.1",
         "nodemon": "^2.0.2",
-        "sucrase": "^3.12.1",
+        "sucrase": "^3.13.0",
         "tslint": "^6.0.0",
         "tslint-config-prettier": "^1.18.0",
         "typescript": "^3.8.3"
